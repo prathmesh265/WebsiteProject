@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parallax Scrolling website | Vanilla JavaScript</title>
+    <link rel="stylesheet" href="Style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Mountains</a>
+         <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+    </header>
+    <section>
+       
+        <img src="cloud.png" id="cloud">
+        <img src="birds.png" id="birds">
+        <img src="sun.png" id="sun">
+        <img src="mountain.png" id="mountain"> 
+        <h2 id="text"> Nature</h2>
+        
+        
+        <a href="#sec" id="btn">Explore</a>
+        
+        <img src="grass.png" id="grass">
+        
+    </section>
+    <div class="sec" id="sec">
+        
+          <h2>Let's connect with nature</h2>
+            <p> Nature gifts many benefits to humans. From the air we breathe,
+             the water we drink, and the food we eat, nature enhances our 
+             wellbeing and freely provides the essentials for our survival.<br><br>
+            For decades, scientists and environmentalists have discussed the 
+            concept of ECOSYSTEM SERVICES. However, it wasn’t until the early 2000s 
+            that it became more common place. From 2001-2005, the Millennium Ecosystem
+             Assessment (MA) embarked on a study to determine the impact on 
+             humans should ecosystems continue to change.
+             Drawing on the knowledge of over 1,000 experts from across the globe,
+              they evaluated “the condition and trends in the world’s ecosystems 
+              and the services they provide,” according to the MA website. 
+              They also identified evidence-based science to determine the best
+               methods for conservation, enhancement, and sustainable use of
+                ecosystems.<br><br>
+            While the concept of ecosystem services is commonly understood 
+            within the science and environmentalist community, one study found 
+            that it’s not necessarily common knowledge amongst the public. 
+            That’s why we’ve put together some basic explanations and examples 
+            below.</p><br><br>
+            <h3>Ecosystem services are often broken down into four
+                 broad categories.</h3>
+                 <br>
+                 <br>
+             <h4> Supporting Services</h4>
+             <br>
+             <p>
+             Supporting services are the foundation of ecosystems. 
+             These natural processes keep them functioning and healthy.
+              Supporting services include photosynthesis, the creation of soil,
+               nutrient cycling, and pollination, among many others. 
+            They basically make it possible for all life to exist and thrive.  
+             </p>
+             <br>
+             <br>
+            <h5>Provisioning Services</h5>
+            <br>
+            <p>Provisioning services are basically anything that can be 
+            extracted from nature. The first thing people tend to think of
+             is food. Fruits, vegetables, nuts, livestock, fish, and seafood
+              are all direct products of ecosystems, according to the
+               National Wildlife Federation (NWF). Beyond food, provisioning 
+               services include drinking water, plants that can be 
+               transformed into clothing and medicine, raw materials like
+                timber and minerals, and other materials that can be 
+                converted into energy.
+            </p>
+            <br>
+            <br>
+            <h6>Regulating Services</h6>
+             <br><p>Regulating services moderate natural occurrences in ecosystems.
+             They also ensure ecosystems continue to function in sustainable and
+              resilient ways. For example, plants clean and filter water and also 
+              help regulate air quality. Bees pollinate flowers, bacteria help
+               decompose waste, while ladybugs help control pest populations 
+               (think aphids). Tree roots even prevent erosion as they hold soil 
+               in place.
+             </p>
+         <br><br>
+         <h1>“Save the Earth; it's hard to find a good planet.”</h1>
+         <br>
+         <br><br><br><br><br><br>
+         <h7  >@Created by Prathmesh Thanekar</h7>
+    </div>
+    <script>
+        let cloud = document.getElementById('cloud');
+        let birds = document.getElementById('birds');
+        let sun = document.getElementById('sun');
+        let text= document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountain = document.getElementById('mountain');
+         
+        let header= document.querySelector('header');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+
+             cloud.style.left= value*0.25+'px'; 
+             birds.style.top=value*-1.5+'px';
+             sun.style.top=value*0.50 + 'px';
+             text.style.marginRight=value*4+'px';
+             text.style.marginTop=value*1.5+'px';
+             btn.style.marginTop=value*1.5+'px';
+             header.style.top=value*0.50 + 'px';
+        })
+    </script>
+</body>
+</html>
